@@ -19,15 +19,15 @@ Before running this project, ensure you have the following:
 
 ## What This Project Does
 This Terraform configuration deploys a fault-tolerant Nginx environment. The following resources are created:
-*    • **Networking:** A VPC with public and private subnets spanning two Availability Zones, including Internet Gateway, NAT Gateway, route tables, and security groups.
-*    • **Load Balancing:** An Application Load Balancer (ALB) placed in public subnets to distribute traffic.
-*    • **Compute:** An Auto Scaling Group that provisions ECS-optimized EC2 instances in private subnets.
-*    • **Orchestration:** An ECS Cluster and ECS Service to manage Nginx containers running on EC2.
-*    • **Storage:** EFS (Elastic File System) for persistent storage, mounted directly inside ECS containers.
-*    • **Registry:** ECR integration for pulling the custom Nginx Docker image.
-*    • **Security & Logs:**
-**        ◦ IAM roles and policies for EC2, ECS, ECR, EFS, and CloudWatch.
-**       ◦ CloudWatch log groups for capturing ECS task logs.
+*     **Networking:** A VPC with public and private subnets spanning two Availability Zones, including Internet Gateway, NAT Gateway, route tables, and security groups.
+*     **Load Balancing:** An Application Load Balancer (ALB) placed in public subnets to distribute traffic.
+*     **Compute:** An Auto Scaling Group that provisions ECS-optimized EC2 instances in private subnets.
+*     **Orchestration:** An ECS Cluster and ECS Service to manage Nginx containers running on EC2.
+*     **Storage:** EFS (Elastic File System) for persistent storage, mounted directly inside ECS containers.
+*     **Registry:** ECR integration for pulling the custom Nginx Docker image.
+*     **Security & Logs:**
+       ◦ IAM roles and policies for EC2, ECS, ECR, EFS, and CloudWatch.
+      ◦ CloudWatch log groups for capturing ECS task logs.
 
 ## Project Deployment
 
