@@ -16,39 +16,6 @@ Before running this project, ensure you have the following:
 ## Architecture Diagram
 ![Architecture Diagram](./06-infra.png)
 
-## Project Directory Structure
-├── backend.tf
-├── main.tf
-├── modules
-│   ├── alb
-│   │   ├── main.tf
-│   │   ├── outputs.tf
-│   │   └── variables.tf
-│   ├── ecr
-│   │   ├── main.tf
-│   │   ├── outputs.tf
-│   │   └── variables.tf
-│   ├── ecs
-│   │   ├── main.tf
-│   │   ├── outputs.tf
-│   │   ├── userdata.tpl
-│   │   └── variables.tf
-│   ├── efs
-│   │   ├── main.tf
-│   │   ├── outputs.tf
-│   │   └── variables.tf
-│   ├── security
-│   │   ├── main.tf
-│   │   ├── outputs.tf
-│   │   └── variables.tf
-│   └── vpc
-│       ├── main.tf
-│       ├── outputs.tf
-│       └── variables.tf
-├── outputs.tf
-├── provider.tf
-├── terraform.tfvars
-└── variables.tf
 
 ## What This Project Does
 This Terraform configuration deploys a fault-tolerant Nginx environment. The following resources are created:
@@ -62,19 +29,27 @@ This Terraform configuration deploys a fault-tolerant Nginx environment. The fol
         ◦ IAM roles and policies for EC2, ECS, ECR, EFS, and CloudWatch.
         ◦ CloudWatch log groups for capturing ECS task logs.
 
-## How to Apply This Project
+## Project Deployment
 
-**Initialize Terraform**
+### Initialize Terraform
+```bash
 terraform init
+```
 
-**Validate the configuration**
+### Validate
+```bash
 terraform validate
+```
 
-**Preview changes**
+### Plan
+```bash
 terraform plan
+```
 
-**Deploy the infrastructure**
-terraform apply -auto-approve
+### Apply
+```bash
+terraform apply
+```
 
 **Post-deployment checks**
 • Navigate to the AWS console
