@@ -52,10 +52,10 @@ terraform apply
 ```
 
 **Post-deployment checks**
-* • Navigate to the AWS console
-* • Go to the ALB service
-* • Copy the ALB DNS name and access it in the browser
-* • You should see the Nginx page served from ECS EC2 using EFS as persistent storage
+*  Navigate to the AWS console
+*  Go to the ALB service
+*  Copy the ALB DNS name and access it in the browser
+*  You should see the Nginx page served from ECS EC2 using EFS as persistent storage
 
 ## Cleanup
 To delete the entire infrastructure:
